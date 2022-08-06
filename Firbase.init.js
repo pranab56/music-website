@@ -6,12 +6,12 @@ import getauth from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBMIXBYHSOWHqBsL_R-y3U4OW3xwbqU_Xg",
-  authDomain: "music-website-574e1.firebaseapp.com",
-  projectId: "music-website-574e1",
-  storageBucket: "music-website-574e1.appspot.com",
-  messagingSenderId: "610639150135",
-  appId: "1:610639150135:web:abcaac1ca07bc5a988d3b2"
+  apiKey:process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDERID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
