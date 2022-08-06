@@ -5,6 +5,7 @@ import { Routes,Route, useNavigate } from 'react-router-dom';
 
 import './App.css';
 import { app } from './component/Firebase.init';
+import {AnimatePresence} from "framer-motion"
 
 
 
@@ -34,12 +35,14 @@ useEffect(()=>{
   })
 },[])
   return (
-    <div className="w-screen h-screen bg-blue-500 justify-center items-center">
+    <AnimatePresence exitBeforeEnter>
+    <div className="h-auto min-w-[680px] justify-center items-center">
       <Routes>
         <Route path='/' element={<Home> </Home>}></Route>
         <Route path='/login' element={<Login setAuth={setAuth}></Login>}></Route>
       </Routes>
     </div>
+    </AnimatePresence>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
+import Heder from './Heder';
 
 const Home = () => {
     return (
-        <div>
-            <h3>this is home</h3>
+        <div className='w-full h-16 flex flex-col items-center justify-center bg-slate-100'>
+            <Heder/>
         </div>
     );
 };
