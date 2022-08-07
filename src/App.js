@@ -13,6 +13,7 @@ import {AnimatePresence} from "framer-motion"
 
 import Home from './component/Home';
 import Login from './component/Login';
+import Heder from './component/Heder';
 
 function App() {
   const navigate=useNavigate()
@@ -36,9 +37,11 @@ useEffect(()=>{
 },[])
   return (
     <AnimatePresence exitBeforeEnter>
-    <div className="h-auto min-w-[680px] justify-center items-center">
+      
+    <div className="h-auto min-w-[680px] justify-center">
+    <Home></Home>
       <Routes>
-        <Route path='/' element={<Home> </Home>}></Route>
+        {/* <Route path='/home' element={<Home></Home>}></Route> */}
         <Route path='/login' element={<Login setAuth={setAuth}></Login>}></Route>
       </Routes>
     </div>
